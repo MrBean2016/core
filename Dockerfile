@@ -4,7 +4,7 @@ FROM ${BUILD_FROM}
 # Synchronize with homeassistant/core.py:async_stop
 ENV \
     S6_SERVICES_GRACETIME=220000
-
+ENV WHEELS_LINKS=https://wheels.home-assistant.io/musllinux/
 WORKDIR /usr/src
 
 ## Setup Home Assistant Core dependencies
