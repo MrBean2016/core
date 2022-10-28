@@ -6,7 +6,7 @@ ENV \
     S6_SERVICES_GRACETIME=220000
 ENV WHEELS_LINKS=https://wheels.home-assistant.io/musllinux/
 WORKDIR /usr/src
-RUN apt-get -y install python3-pip
+RUN apk add --update python3-pip
 ## Setup Home Assistant Core dependencies
 COPY requirements.txt homeassistant/
 COPY homeassistant/package_constraints.txt homeassistant/homeassistant/
